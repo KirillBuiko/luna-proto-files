@@ -1,0 +1,24 @@
+{
+  "name": "luna-proto-files",
+  "version": "0.0.1",
+  "description": "Proto files for GRPC in luna system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KirillBuiko/luna-proto-files.git"
+  },
+  "keywords": [
+    "luna",
+    "grpc",
+    "proto"
+  ],
+  "author": "Kirill Buyko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KirillBuiko/luna-proto-files/issues"
+  },
+  "homepage": "https://github.com/KirillBuiko/luna-proto-files#readme"
+}
