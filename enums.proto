@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+// What is the object of request
+// Set able types: VARIABLE, PROGRAM, TASK, COMPUTATIONAL_MODEL
+enum RequestType {
+  UNKNOWN_REQUEST_TYPE = 0;
+  VARIABLE = 1;
+  VARIABLE_LIST = 2;
+  PROGRAM = 10;
+  PROGRAM_GENERATE = 11;
+  PROGRAM_EXECUTE = 12;
+  PROGRAM_INTERPRET = 13;
+  TASK = 20;
+  TASK_LIST = 21;
+  TASK_PLAN = 22;
+  COMPUTATIONAL_MODEL = 30;
+  COMPUTATIONAL_MODEL_LIST = 31;
+}
+
+// What type of data sent by Set or got by Get.
+// JSON means data send in DataInfo message. Other send in chunk_data after.
+enum DataType {
+  UNKNOWN_DATA_TYPE = 0;
+  FILE = 1;
+  TEXT = 20;
+  JSON = 30;
+  LINK = 40;
+}

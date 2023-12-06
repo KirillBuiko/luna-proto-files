@@ -1,0 +1,33 @@
+syntax = "proto3";
+import "set_messages.proto";
+import "get_messages.proto";
+import "enums.proto";
+
+
+message GetRequestInfo {
+  RequestType requestType = 1;
+  oneof info_type {
+    VariableGetInfo variable_get_info = 2;
+    TaskGetInfo task_get_info = 3;
+  };
+}
+
+message DataRequestInfo {
+  RequestType requestType = 1;
+  oneof info_type {
+    VariableDataInfo variable_data_info = 2;
+    TaskDataInfo task_data_info = 3;
+  }
+}
+
+message DataStream {
+  oneof info_or_data {
+    DataRequestInfo info = 1;
+    bytes chunk_data = 2;
+  }
+}
+
+service DataRequests {
+  rpc Get(GetRequestInfo) returns (stream DataStream) {}
+  rpc Set(stream DataStream) returns (GetRequestInfo) {}
+}
