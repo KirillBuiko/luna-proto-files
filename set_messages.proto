@@ -12,5 +12,4 @@ message TaskDataInfo {
 message VariableDataInfo {
   optional VariableGetInfo get_info = 1;
   string variable_name = 2;
-  DataType data_type = 3;
 }
