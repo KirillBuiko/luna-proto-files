@@ -16,7 +16,8 @@ enum RequestType {
   COMPUTATIONAL_MODEL = 30;
   COMPUTATIONAL_MODEL_LIST = 31;
   MODULE = 40;
-  MODULE_MODEL_LIST = 41;
+  MODULE_LIST = 41;
+  MODULE_INFO = 42;
 }
 
 // What type of data sent by Set or got by Get.
