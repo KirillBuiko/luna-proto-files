@@ -28,7 +28,16 @@ message DataStream {
   }
 }
 
+message BidiMessage {
+  oneof type {
+    DataStream set = 1;
+    GetRequestInfo get = 2;
+    bool end = 3;
+  }
+}
+
 service DataRequests {
   rpc Get(GetRequestInfo) returns (stream DataStream) {}
   rpc Set(stream DataStream) returns (GetRequestInfo) {}
+  rpc Connect(stream BidiMessage) returns (stream BidiMessage) {}
 }
