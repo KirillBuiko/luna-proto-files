@@ -36,6 +36,11 @@ message BidiMessage {
   }
 }
 
+message HelloInfo {
+  string name = 1;
+  repeated RequestType operations = 2;
+}
+
 service DataRequests {
   rpc Get(GetRequestInfo) returns (stream DataStream) {}
   rpc Set(stream DataStream) returns (GetRequestInfo) {}
