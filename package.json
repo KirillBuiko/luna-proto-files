@@ -1,6 +1,6 @@
 {
   "name": "luna-proto-files",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Proto files for GRPC in luna system",
   "main": "index.js",
   "scripts": {
