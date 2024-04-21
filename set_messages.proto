@@ -2,14 +2,42 @@ syntax = "proto3";
 import "get_messages.proto";
 import "enums.proto";
 
-// info to set or update task
-message TaskDataInfo {
-  optional TaskGetInfo get_info = 1;
-  string task_id = 2;
+message FileInfo {
+  string filename = 1;
 }
 
-// info to set or update variable
-message VariableDataInfo {
-  optional VariableGetInfo get_info = 1;
-  string variable_name = 2;
+message CodeFragmentData {
+  optional CodeFragmentGet get_info = 1;
+  FileInfo file_info = 2;
 }
+
+message CodeFragmentInfoData {
+  optional CodeFragmentInfoGet get_info = 1;
+  string value = 2;
+}
+
+message CodeFragmentListData {
+  string value = 2;
+}
+
+message CodeFragmentPluginData {
+  optional CodeFragmentPluginGet get_info = 1;
+  FileInfo file_info = 2;
+}
+
+message CodeFragmentPluginProcedureData {
+  FileInfo file_info = 2;
+}
+
+message CodeFragmentPluginsListData {
+  string value = 2;
+}
+
+//message TaskDataInfo {
+//  optional TaskGet get_info = 1;
+//}
+
+//message VariableDataInfo {
+//  optional VariableGet get_info = 1;
+//  string variable_name = 2;
+//}

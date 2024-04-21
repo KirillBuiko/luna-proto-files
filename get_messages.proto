@@ -1,11 +1,39 @@
 syntax = "proto3";
 
 // info to get variable
-message VariableGetInfo {
+message VariableGet {
   string variable_id = 1;
 }
 
 // info to get task
-message TaskGetInfo {
+message TaskGet {
   string task_id = 1;
 }
+
+message CodeFragmentGet {
+  string id = 1;
+}
+
+//message CodeFragmentListGet {
+//}
+
+message CodeFragmentInfoGet {
+  string id = 1;
+}
+
+message CodeFragmentPluginGet {
+  string code_fragment_id = 1;
+  string plugin_name = 2;
+}
+
+message CodeFragmentPluginsListGet {
+  string code_fragment_id = 1;
+}
+
+message CodeFragmentPluginProcedureGet {
+  string code_fragment_id = 1;
+  string plugin_name = 2;
+}
+
+//message CodeFragmentPluginsListGet {
+//}

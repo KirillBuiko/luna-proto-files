@@ -4,20 +4,23 @@ syntax = "proto3";
 // Set able types: VARIABLE, PROGRAM, TASK, COMPUTATIONAL_MODEL
 enum RequestType {
   UNKNOWN_REQUEST_TYPE = 0;
-  VARIABLE = 1;
-  VARIABLE_LIST = 2;
-  PROGRAM = 10;
-  PROGRAM_GENERATE = 11;
-  PROGRAM_EXECUTE = 12;
-  PROGRAM_INTERPRET = 13;
-  TASK = 20;
-  TASK_LIST = 21;
-  TASK_PLAN = 22;
-  COMPUTATIONAL_MODEL = 30;
-  COMPUTATIONAL_MODEL_LIST = 31;
-  MODULE = 40;
-  MODULE_LIST = 41;
-  MODULE_INFO = 42;
+  VARIABLE = 2;
+  VARIABLE_LIST = 4;
+  PROGRAM = 52;
+  PROGRAM_GENERATE = 54;
+  PROGRAM_EXECUTE = 56;
+  PROGRAM_INTERPRET = 58;
+  TASK = 102;
+  TASK_LIST = 104;
+  TASK_PLAN = 106;
+  COMPUTATIONAL_MODEL = 152;
+  COMPUTATIONAL_MODEL_LIST = 154;
+  CODE_FRAGMENT = 202; // Get or add all code fragment root files
+  CODE_FRAGMENT_LIST = 204; // Get json with list of code fragments
+  CODE_FRAGMENT_INFO = 206; // Get code_fragment_info
+  CODE_FRAGMENT_PLUGIN = 208; // Add plugin for code fragment
+  CODE_FRAGMENT_PLUGINS_LIST = 210; // List of plugins for fragment
+  CODE_FRAGMENT_PLUGIN_PROCEDURE = 212; // Get proceed code fragment
 }
 
 // What type of data sent by Set or got by Get.

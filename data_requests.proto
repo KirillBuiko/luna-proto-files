@@ -6,18 +6,24 @@ import "enums.proto";
 
 message GetRequestInfo {
   RequestType request_type = 1;
-  oneof info_type {
-    VariableGetInfo variable_get_info = 10;
-    TaskGetInfo task_get_info = 11;
+  oneof get_info_type {
+    CodeFragmentGet code_fragment_get = 52;
+    CodeFragmentInfoGet code_fragment_info_get = 54;
+    CodeFragmentPluginGet code_fragment_plugin_get = 56;
+    CodeFragmentPluginProcedureGet code_fragment_plugin_procedure_get = 58;
+    CodeFragmentPluginsListGet code_fragment_plugin_list_get = 60;
   };
 }
 
 message DataRequestInfo {
   RequestType request_type = 1;
   DataType data_type = 2;
-  oneof info_type {
-    VariableDataInfo variable_data_info = 10;
-    TaskDataInfo task_data_info = 11;
+  oneof data_value_type {
+    // variables
+    CodeFragmentData code_fragment = 50;
+    CodeFragmentInfoData code_fragment_info = 52;
+    CodeFragmentListData code_fragment_list = 54;
+    CodeFragmentPluginsListData code_fragment_plugins_list = 56;
   }
 }
 
@@ -28,6 +34,7 @@ message DataStream {
   }
 }
 
+// ignore
 message BidiMessage {
   oneof type {
     DataStream set = 1;
@@ -37,6 +44,7 @@ message BidiMessage {
   }
 }
 
+// ignore
 message HelloInfo {
   string name = 1;
   repeated RequestType operations = 2;
