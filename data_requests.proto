@@ -24,6 +24,7 @@ message DataRequestInfo {
     CodeFragmentInfoData code_fragment_info = 52;
     CodeFragmentListData code_fragment_list = 54;
     CodeFragmentPluginsListData code_fragment_plugins_list = 56;
+    CodeFragmentPluginProcedureData code_fragment_plugin_procedure = 58;
   }
 }
 
