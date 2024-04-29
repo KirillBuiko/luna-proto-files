@@ -9,6 +9,7 @@ message FileInfo {
 message CodeFragmentData {
   optional CodeFragmentGet get_info = 1;
   FileInfo file_info = 2;
+  optional string code_fragment_json = 3;
 }
 
 message CodeFragmentInfoData {
@@ -23,7 +24,6 @@ message CodeFragmentListData {
 message CodeFragmentPluginData {
   optional CodeFragmentPluginGet get_info = 1;
   FileInfo file_info = 2;
-  optional string code_fragment_json = 3;
 }
 
 message CodeFragmentPluginProcedureData {
