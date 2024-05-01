@@ -22,8 +22,7 @@ message CodeFragmentInfoGet {
 }
 
 message CodeFragmentPluginGet {
-  string code_fragment_id = 1;
-  string plugin_name = 2;
+  string plugin_id = 1;
 }
 
 message CodeFragmentPluginsListGet {
