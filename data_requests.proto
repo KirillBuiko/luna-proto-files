@@ -2,10 +2,12 @@ syntax = "proto3";
 import "set_messages.proto";
 import "get_messages.proto";
 import "enums.proto";
+import "google/protobuf/any.proto";
 
 
 message GetRequestInfo {
   RequestType request_type = 1;
+  google.protobuf.Any get_info = 2;
   oneof get_info_type {
     CodeFragmentGet code_fragment_get = 52;
     CodeFragmentInfoGet code_fragment_info_get = 54;
@@ -19,7 +21,6 @@ message DataRequestInfo {
   RequestType request_type = 1;
   DataType data_type = 2;
   oneof data_value_type {
-    // variables
     CodeFragmentData code_fragment = 50;
     CodeFragmentInfoData code_fragment_info = 52;
     CodeFragmentListData code_fragment_list = 54;
