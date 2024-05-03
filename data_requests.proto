@@ -7,7 +7,7 @@ import "google/protobuf/any.proto";
 
 message GetInfo {
   RequestType request_type = 1;
-  oneof get_info_type {
+  oneof info_type {
     CFGet cf_get = 52;
     CFInfoGet cf_info_get = 54;
     CFPluginGet cf_plugin_get = 56;
