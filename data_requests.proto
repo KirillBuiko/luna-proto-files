@@ -7,13 +7,12 @@ import "google/protobuf/any.proto";
 
 message GetRequestInfo {
   RequestType request_type = 1;
-  google.protobuf.Any get_info = 2;
   oneof get_info_type {
-    CodeFragmentGet code_fragment_get = 52;
-    CodeFragmentInfoGet code_fragment_info_get = 54;
-    CodeFragmentPluginGet code_fragment_plugin_get = 56;
-    CodeFragmentPluginProcedureGet code_fragment_plugin_procedure_get = 58;
-    CodeFragmentPluginsListGet code_fragment_plugin_list_get = 60;
+    CFGet cf_get = 52 [json_name = "get_info"];
+    CFInfoGet cf_info_get = 54 [json_name = "get_info"];
+    CFPluginGet cf_plugin_get = 56 [json_name = "get_info"];
+    CFPluginProcedureGet cf_plugin_procedure_get = 58 [json_name = "get_info"];
+    CFPluginsListGet cf_plugin_list_get = 60 [json_name = "get_info"];
   };
 }
 
@@ -21,13 +20,19 @@ message DataRequestInfo {
   RequestType request_type = 1;
   DataType data_type = 2;
   oneof data_value_type {
-    CodeFragmentData code_fragment = 50;
-    CodeFragmentInfoData code_fragment_info = 52;
-    CodeFragmentListData code_fragment_list = 54;
-    CodeFragmentPluginsListData code_fragment_plugins_list = 56;
-    CodeFragmentPluginProcedureData code_fragment_plugin_procedure = 58;
-    CodeFragmentPluginData code_fragment_plugin = 60;
+    CFData cf = 50 [json_name = "data"];
+    CFInfoData cf_info = 52 [json_name = "data"];
+    CFListData cf_list = 54 [json_name = "data"];
+    CFPluginsListData cf_plugins_list = 56 [json_name = "data"];
+    CFPluginProcedureData cf_plugin_procedure = 58 [json_name = "data"];
+    CFPluginData cf_plugin = 60 [json_name = "data"];
   }
+}
+
+message DataResponseInfo {
+  RequestType request_type = 1;
+  string response = 2;
+
 }
 
 message DataStream {
@@ -38,24 +43,24 @@ message DataStream {
 }
 
 // ignore
-message BidiMessage {
-  oneof type {
-    DataStream set = 1;
-    GetRequestInfo get = 2;
-    HelloInfo hello = 3;
-    bool end = 20;
-  }
-}
+//message BidiMessage {
+//  oneof type {
+//    DataStream set = 1;
+//    GetRequestInfo get = 2;
+//    HelloInfo hello = 3;
+//    bool end = 20;
+//  }
+//}
 
 // ignore
-message HelloInfo {
-  string name = 1;
-  repeated RequestType operations = 2;
-}
+//message HelloInfo {
+//  string name = 1;
+//  repeated RequestType operations = 2;
+//}
 
 service DataRequests {
   rpc Get(GetRequestInfo) returns (stream DataStream) {}
   rpc Set(stream DataStream) returns (GetRequestInfo) {}
-  rpc Hello(HelloInfo) returns (HelloInfo) {}
-  rpc Connect(stream BidiMessage) returns (stream BidiMessage) {}
+//  rpc Hello(HelloInfo) returns (HelloInfo) {}
+//  rpc Connect(stream BidiMessage) returns (stream BidiMessage) {}
 }

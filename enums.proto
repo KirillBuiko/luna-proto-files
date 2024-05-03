@@ -15,12 +15,12 @@ enum RequestType {
   TASK_PLAN = 106;
   COMPUTATIONAL_MODEL = 152;
   COMPUTATIONAL_MODEL_LIST = 154;
-  CODE_FRAGMENT = 202; // Get or add all code fragment root files
-  CODE_FRAGMENT_LIST = 204; // Get json with list of code fragments
-  CODE_FRAGMENT_INFO = 206; // Get code_fragment_info
-  CODE_FRAGMENT_PLUGIN = 208; // Add plugin for code fragment
-  CODE_FRAGMENT_PLUGINS_LIST = 210; // List of plugins for fragment
-  CODE_FRAGMENT_PLUGIN_PROCEDURE = 212; // Get proceed code fragment
+  CF = 202; // Get or add all code fragment root files
+  CF_LIST = 204; // Get json with list of code fragments
+  CF_INFO = 206; // Get cf_info
+  CF_PLUGIN = 208; // Add plugin for code fragment
+  CF_PLUGINS_LIST = 210; // List of plugins for fragment
+  CF_PLUGIN_PROCEDURE = 212; // Get proceed code fragment
 }
 
 // What type of data sent by Set or got by Get.
