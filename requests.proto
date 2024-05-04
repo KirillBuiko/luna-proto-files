@@ -1,5 +1,5 @@
 syntax = "proto3";
-import "set_messages.proto";
+import "data_messages.proto";
 import "get_messages.proto";
 import "enums.proto";
 import "google/protobuf/any.proto";
@@ -54,7 +54,7 @@ message DataStream {
 //  repeated RequestType operations = 2;
 //}
 
-service DataRequests {
+service Requests {
   rpc Get(GetInfo) returns (stream DataStream) {}
   rpc Set(stream DataStream) returns (GetInfo) {}
 //  rpc Hello(HelloInfo) returns (HelloInfo) {}
