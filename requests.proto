@@ -54,7 +54,7 @@ message DataStream {
 //  repeated RequestType operations = 2;
 //}
 
-service Requests {
+service MainRequests {
   rpc Get(GetInfo) returns (stream DataStream) {}
   rpc Set(stream DataStream) returns (GetInfo) {}
 //  rpc Hello(HelloInfo) returns (HelloInfo) {}
