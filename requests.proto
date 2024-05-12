@@ -8,11 +8,11 @@ import "google/protobuf/any.proto";
 message GetInfo {
   RequestType request_type = 1;
   oneof info_type {
-    CFGet cf_get = 52;
-    CFInfoGet cf_info_get = 54;
-    CFPluginGet cf_plugin_get = 56;
-    CFPluginProcedureGet cf_plugin_procedure_get = 58;
-    CFPluginsListGet cf_plugins_list_get = 60;
+    CodeFGet code_f_get = 52;
+    CodeFInfoGet code_f_info_get = 54;
+    CodeFPluginGet code_f_plugin_get = 56;
+    CodeFPluginProcedureGet code_f_plugin_procedure_get = 58;
+    CodeFPluginsListGet code_f_plugins_list_get = 60;
     string response = 500;
   };
 }
@@ -20,14 +20,14 @@ message GetInfo {
 // RESPONSE FROM GET / REQUEST TO SET
 message DataInfo {
   RequestType request_type = 1;
-  repeated DataType data_type = 2;
+  DataType data_type = 2;
   oneof data_value_type {
-    CFData cf = 50;
-    CFInfoData cf_info = 52;
-    CFListData cf_list = 54;
-    CFPluginsListData cf_plugins_list = 56;
-    CFPluginProcedureData cf_plugin_procedure = 58;
-    CFPluginData cf_plugin = 60;
+    CodeFData code_f = 50;
+    CodeFInfoData code_f_info = 52;
+    CodeFListData code_f_list = 54;
+    CodeFPluginsListData code_f_plugins_list = 56;
+    CodeFPluginProcedureData code_f_plugin_procedure = 58;
+    CodeFPluginData code_f_plugin = 60;
   }
 }
 

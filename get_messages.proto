@@ -1,28 +1,28 @@
 syntax = "proto3";
 
-message CFGet {
+message CodeFGet {
   string id = 1;
 }
 
-//message CFListGet {
+//message CodeFListGet {
 //}
 
-message CFInfoGet {
+message CodeFInfoGet {
   string id = 1;
 }
 
-message CFPluginGet {
+message CodeFPluginGet {
   string plugin_id = 1;
 }
 
-message CFPluginsListGet {
-  string cf_id = 1;
+message CodeFPluginsListGet {
+  string code_f_id = 1;
 }
 
-message CFPluginProcedureGet {
-  string cf_id = 1;
+message CodeFPluginProcedureGet {
+  string code_f_id = 1;
   string type = 2;
 }
 
-//message CFPluginsListGet {
+//message CodeFPluginsListGet {
 //}

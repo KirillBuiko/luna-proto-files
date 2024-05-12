@@ -6,31 +6,31 @@ message FileInfo {
   string filename = 1;
 }
 
-message CFData {
-  optional CFGet get_info = 1;
+message CodeFData {
+  optional CodeFGet get_info = 1;
 //  message Value {
 //    string json = 1;
 //  }
   string value = 2;
 }
 
-message CFInfoData {
+message CodeFInfoData {
   string value = 2;
 }
 
-message CFListData {
+message CodeFListData {
   string value = 2;
 }
 
-message CFPluginData {
-  optional CFPluginGet get_info = 1;
+message CodeFPluginData {
+  optional CodeFPluginGet get_info = 1;
 }
 
-message CFPluginProcedureData {
+message CodeFPluginProcedureData {
   string value = 2;
 }
 
-message CFPluginsListData {
+message CodeFPluginsListData {
   string value = 2;
 }
 
