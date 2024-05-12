@@ -48,7 +48,7 @@ message DataStream {
 //  }
 //}
 
-// ignore
+// still ignore
 //message HelloInfo {
 //  string name = 1;
 //  repeated RequestType operations = 2;
