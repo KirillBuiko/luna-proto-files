@@ -15,7 +15,7 @@ enum RequestType {
 //  TASK_PLAN = 106;
 //  COMPUTATIONAL_MODEL = 152;
 //  COMPUTATIONAL_MODEL_LIST = 154;
-  CodeF = 202; // Get or add all code fragment root files
+  CODE_F = 202; // Get or add all code fragment root files
   CODE_F_LIST = 204; // Get json with list of code fragments
   CODE_F_INFO = 206; // Get code_f_info
   CODE_F_PLUGIN = 208; // Add plugin for code fragment
