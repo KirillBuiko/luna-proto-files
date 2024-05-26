@@ -13,6 +13,8 @@ message GetInfo {
     CodeFPluginGet code_f_plugin_get = 56;
     CodeFPluginProcedureGet code_f_plugin_procedure_get = 58;
     CodeFPluginsListGet code_f_plugins_list_get = 60;
+    VarGet var_get = 100;
+    VarValueGet var_value_get = 102;
     string response = 500;
   };
 }
@@ -28,6 +30,8 @@ message DataInfo {
     CodeFPluginsListData code_f_plugins_list = 56;
     CodeFPluginProcedureData code_f_plugin_procedure = 58;
     CodeFPluginData code_f_plugin = 60;
+    VarData var = 100;
+    VarValueData var_value = 102;
   }
 }
 

@@ -24,5 +24,10 @@ message CodeFPluginProcedureGet {
   string type = 2;
 }
 
-//message CodeFPluginsListGet {
-//}
+message VarGet {
+  string id = 1;
+}
+
+message VarValueGet {
+  string id = 1;
+}

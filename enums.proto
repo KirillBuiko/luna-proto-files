@@ -21,6 +21,12 @@ enum RequestType {
   CODE_F_PLUGIN = 208; // Add plugin for code fragment
   CODE_F_PLUGINS_LIST = 210; // List of plugins for fragment
   CODE_F_PLUGIN_PROCEDURE = 212; // Get proceed code fragment
+  VAR = 302;
+  VAR_DELETE = 304;
+  VAR_VALUE = 306;
+  VAR_VALUE_DELETE = 308;
+  VAR_ADD_FILE = 310;
+  VAR_SET_FILE = 312;
 }
 
 // What type of data sent by Set or got by Get.

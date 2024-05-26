@@ -1,6 +1,6 @@
 {
   "name": "luna-proto-files",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "Proto files for GRPC in luna system",
   "scripts": {
     "build-proto-types": "node ./node_modules/@grpc/proto-loader/build/bin/proto-loader-gen-types.js requests.proto --outDir=./build --longs=String --enums=String --oneofs --grpcLib=@grpc/grpc-js"
