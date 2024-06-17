@@ -33,7 +33,6 @@ enum RequestType {
 // JSON means data send in DataInfo message. Other send in chunk_data after.
 enum DataType {
   UNKNOWN_DATA_TYPE = 0;
-  FILE = 1;
   TEXT = 20;
   JSON = 30;
   LINK = 40;

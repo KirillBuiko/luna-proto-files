@@ -34,6 +34,10 @@ message CodeFPluginsListData {
   string value = 2;
 }
 
+message Custom {
+
+}
+
 enum VarValueType {
   unknown = 0;
   string = 1;

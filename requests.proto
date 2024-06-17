@@ -16,6 +16,7 @@ message GetInfo {
     VarGet var_get = 100;
     VarValueGet var_value_get = 102;
     string response = 500;
+    Custom custom = 501;
   };
 }
 
@@ -32,6 +33,7 @@ message DataInfo {
     CodeFPluginData code_f_plugin = 60;
     VarData var = 100;
     VarValueData var_value = 102;
+    Custom custom = 501;
   }
 }
 
