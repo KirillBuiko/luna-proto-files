@@ -4,19 +4,22 @@ import "get_messages.proto";
 import "enums.proto";
 import "google/protobuf/any.proto";
 
-
+// RESPONSE FROM SET / REQUEST TO GET
 message GetInfo {
   RequestType request_type = 1;
   oneof info_type {
-    CodeFGet code_f_get = 52;
-    CodeFInfoGet code_f_info_get = 54;
-    CodeFPluginGet code_f_plugin_get = 56;
+    BasicIdGet code_f_get = 52;
+    BasicIdGet code_f_info_get = 54;
+    BasicIdGet code_f_plugin_get = 56;
     CodeFPluginProcedureGet code_f_plugin_procedure_get = 58;
-    CodeFPluginsListGet code_f_plugins_list_get = 60;
-    VarGet var_get = 100;
-    VarValueGet var_value_get = 102;
+    BasicIdGet code_f_plugins_list_get = 60;
+
+    BasicIdGet var_value_get = 102;
+    BasicIdGet var_value_meta_get = 104;
+
+
     string response = 500;
-    Custom custom = 501;
+    BasicIdGet custom = 501;
   };
 }
 
@@ -25,15 +28,20 @@ message DataInfo {
   RequestType request_type = 1;
   DataType data_type = 2;
   oneof data_value_type {
-    CodeFData code_f = 50;
-    CodeFInfoData code_f_info = 52;
-    CodeFListData code_f_list = 54;
-    CodeFPluginsListData code_f_plugins_list = 56;
-    CodeFPluginProcedureData code_f_plugin_procedure = 58;
-    CodeFPluginData code_f_plugin = 60;
-    VarData var = 100;
-    VarValueData var_value = 102;
-    Custom custom = 501;
+    BasicSettableJsonData code_f = 50;
+    BasicJsonData code_f_info = 52;
+    BasicJsonData code_f_list = 54;
+    BasicJsonData code_f_plugins_list = 56;
+    BasicJsonData code_f_plugin_procedure = 58;
+    BasicGetInfoData code_f_plugin = 60;
+
+    Empty var_value = 102;
+    BasicJsonData var_value_list = 104;
+    BasicGetInfoData var_value_delete = 106;
+    BasicGetInfoData var_value_meta = 108;
+    BasicGetInfoData var_value_meta_delete = 110;
+
+    BasicSettableJsonData custom = 501;
   }
 }
 

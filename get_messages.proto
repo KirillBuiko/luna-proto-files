@@ -1,33 +1,10 @@
 syntax = "proto3";
 
-message CodeFGet {
+message BasicIdGet {
   string id = 1;
-}
-
-//message CodeFListGet {
-//}
-
-message CodeFInfoGet {
-  string id = 1;
-}
-
-message CodeFPluginGet {
-  string plugin_id = 1;
-}
-
-message CodeFPluginsListGet {
-  string code_f_id = 1;
 }
 
 message CodeFPluginProcedureGet {
   string code_f_id = 1;
   string type = 2;
-}
-
-message VarGet {
-  string id = 1;
-}
-
-message VarValueGet {
-  string id = 1;
 }
