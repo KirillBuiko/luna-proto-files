@@ -30,15 +30,15 @@ message DataInfo {
   string endpoint_id = 2;
   DataType data_type = 3;
   oneof data_value_type {
-    BasicGetInfoData code_f = 50;
-    Empty code_f_info = 52;
-    Empty code_f_list = 54;
-    Empty code_f_plugins_list = 56;
-    Empty code_f_plugin_procedure = 58;
+    BasicSettableJsonData code_f = 50;
+    BasicJsonData code_f_info = 52;
+    BasicJsonData code_f_list = 54;
+    BasicJsonData code_f_plugins_list = 56;
+    BasicJsonData code_f_plugin_procedure = 58;
     BasicGetInfoData code_f_plugin = 60;
 
     Empty var_value = 102;
-    Empty var_value_list = 104;
+    BasicJsonData var_value_list = 104;
     BasicGetInfoData var_value_delete = 106;
     BasicGetInfoData var_value_meta = 108;
     BasicGetInfoData var_value_meta_delete = 110;
