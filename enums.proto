@@ -4,6 +4,8 @@ syntax = "proto3";
 // Set able types: VARIABLE, PROGRAM, TASK, COMPUTATIONAL_MODEL
 enum RequestType {
   UNKNOWN_REQUEST_TYPE = 0;
+  OP_QUALITY_REPORT = 100; // Get components quality report
+
   CODE_F = 202; // Get or add all code fragment root files
   CODE_F_LIST = 204; // Get json with list of code fragments
   CODE_F_INFO = 206; // Get code_f_info

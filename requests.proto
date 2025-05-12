@@ -7,6 +7,7 @@ import "google/protobuf/any.proto";
 // RESPONSE FROM SET / REQUEST TO GET
 message GetInfo {
   RequestType request_type = 1;
+  string endpoint_id = 2;
   oneof info_type {
     BasicIdGet code_f_get = 52;
     BasicIdGet code_f_info_get = 54;
@@ -26,17 +27,18 @@ message GetInfo {
 // RESPONSE FROM GET / REQUEST TO SET
 message DataInfo {
   RequestType request_type = 1;
-  DataType data_type = 2;
+  string endpoint_id = 2;
+  DataType data_type = 3;
   oneof data_value_type {
-    BasicSettableJsonData code_f = 50;
-    BasicJsonData code_f_info = 52;
-    BasicJsonData code_f_list = 54;
-    BasicJsonData code_f_plugins_list = 56;
-    BasicJsonData code_f_plugin_procedure = 58;
+    BasicGetInfoData code_f = 50;
+    Empty code_f_info = 52;
+    Empty code_f_list = 54;
+    Empty code_f_plugins_list = 56;
+    Empty code_f_plugin_procedure = 58;
     BasicGetInfoData code_f_plugin = 60;
 
     Empty var_value = 102;
-    BasicJsonData var_value_list = 104;
+    Empty var_value_list = 104;
     BasicGetInfoData var_value_delete = 106;
     BasicGetInfoData var_value_meta = 108;
     BasicGetInfoData var_value_meta_delete = 110;
